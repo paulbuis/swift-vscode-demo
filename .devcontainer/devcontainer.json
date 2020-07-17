@@ -1,0 +1,20 @@
+{
+    "name": "Swift",
+    "image": "paulbuis/swift-vscode-remote-container-docker",
+
+    "runArgs": [
+        "-u", "vscode",
+        "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
+    ],
+
+    "settings": {
+		"lldb.adapterType": "bundled",
+		"lldb.executable": "/usr/bin/lldb",
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+    "extensions": [
+		"pvasek.sourcekit-lsp--dev-unofficial",
+		"vadimcn.vscode-lldb"
+	]
+}
